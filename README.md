@@ -1,2 +1,2 @@
 # zamilyofficial.github.io
-my blog
+used to edit and upload new artcles of the blog.
