@@ -4,29 +4,32 @@
 	<meta charset="utf-8">
 	<title>Zamily.official</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
-	<link rel="stylesheet" type="text/css" href="css/zamily_about_us.css"/>
 	<link rel="stylesheet" type="text/css" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="css/zamily_about_us.css"/>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet"> 
 </head>
 <body>
 	<header>
 		<a href="zamily.studio" id="logo"><img src="img/zamily_logo.png" ></a>
-		<div class="social-platform">
-			<p>Share to:</p>
-			<a href="www.facebook.com"><img src="img/social-Facebook.png"></a>
-			<a href="www.twitter.com"><img src="img/social-twitter.png"></a>
+		
+		<div class="quote">
+			<h2 class="quote">Quote of the day</h2>
+			<p>The wicked flee though no one pursue.</p>
+			<cite>The Holy Bible</cite>
 		</div>
-		<form role="search" class="search">
-			<label for="search">Search:</label>
-			<input type="search" id="search" name="search " size="30"/>
-			<button type="submit" class="search" value="Find"/>
-				<span><img src="img/search_black/search_black.svg" class="search"></span>
-			</button>
-		</form>
+
+		<section id="ss">
+			<div class="social-platform">
+				<p>Share to:</p>
+				<a href="https://www.facebook.com/" target = '_blank'><img src="img/social-Facebook.png"></a>
+				<a href="https://twitter.com/?lang=en" target = '_blank'><img src="img/social-twitter.png"></a>
+			</div>
+		</section>
+
 		<nav role='navigation'>
-			<ul class="nav">				
+			<ul class="navigation">
 				<li>Jimei log
 					<ul class="submenu">
 						<li>ACG-P</li>
@@ -66,13 +69,17 @@
 			</ul>
 		</nav>
 	</header>
+
 	<main role='main'>
 		<article>
-			
-			<time datetime="2022-3-16">
-				March 16,2022
-			</time>
-			
+
+			<section class="edit-info">
+				<span>Last edited by <span id="author"> Ziyou </span> at </span>
+				<time class='clearfix' datetime="2022-3-16">
+					March 16,2022
+				</time>
+			</section>
+
 			<figure>
 				<blockquote>
 					"I have two creatures,one represents DISIRE,anothor represents RATION;together them is a single human being."
@@ -151,9 +158,13 @@
 
 			<!--following is footer-->
 			<footer role='contact' class="content">
-				Contact to us:<address><a href="ziyousama@zamily.studio">ziyousama@zamily.studio</a></address>
+				<h2>Contact to us:</h2>
+				<address><a href="ziyou@zamily.studio">ziyou@zamily.studio</a></address>
+				<address><a href="feedback_board.html">Zamily Board</a></address>
 			</footer>
+		
 		</article>
+	
 	</main>
 	<!--The aside part is used to navagate every part of the article.I add some anchors.-->
 	<div class="sidebar" >
@@ -169,20 +180,35 @@
 		</aside>
 	</div>
 	<div class="bottom">
+		<h2 class="bottom">Leave a comment before fleeing!</h2>
+		
 		<form action="https://send.pageclip.co/XJkdQxkoeBzkCnRo01cDnKAdhW4sEHZm/comment_form" class="pageclip-form" method="post">
-			<label>Your name:</label>
-			<input type="text" name="name" value=""/>
-			<label>email address:</label>
-			<input type="email" name="email" value=""/>
-			<label>Comment & Feedback:</label>
-			<input type="text" name="your comment:">
-			<button type="submit" class="pageclip-form__submit" value="Send">
+
+			<div class="comment">            <!-- comment pannel -->
+				<div>
+					<label>Your name:</label>
+					<input type="text" name="name" value=""/>
+				</div>
+				<div>
+					<label>Email address:</label>
+					<input type="email" name="email" value=""/>
+				</div>
+				<div>
+					<label>Comment & Feedback:</label>
+					<input type="text" name="your comment:">
+				</div>
+			</div>
+
+<!--submit button-->
+			<button type="submit" class="pageclip-form__submit" value="Send"> 
 				<span class="send"><img src="img/send_black/send_black.svg"></span>
 			</button>
 		</form>
+
 		<footer role='contentinfo' class="info">
 			<p><small>&copy; Copyright 1997-2022 Zamliy.official</small></p>
 		</footer>
+	
 	</div>
 	<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 </body>
