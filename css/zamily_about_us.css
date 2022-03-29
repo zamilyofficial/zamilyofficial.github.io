@@ -1,6 +1,141 @@
 /* css注释不会呈现在网页上，但如果访问源代码，就能看到它们 */
+/*-------------------header--------------------------*/
+.social-platform,
+.social-platform p{
+	font-size: 1.5em;
+	display: inline;
+}
 
-/*-------content-------*/
+.social-platform img{
+	vertical-align: text-bottom;
+}
+
+#logo {
+	display: inline-block;
+	position: relative;
+}
+
+div.quote {
+	position: absolute;
+	right: 35px;
+	top: 0;
+	padding: 0;
+	margin: 0;
+}
+
+#ss {
+	display: block;
+}
+
+header {
+	padding: 0;
+	border-bottom: 1px solid #c8c8c8;
+	position: relative;
+}
+
+header li:first-child {
+	border-left: none;
+}
+
+header li {
+	display: inline-block;
+	font-family: 'Open Sans';
+	font-weight: 700;
+	font-size: 1.3em;
+	padding: .5em 0.01em .5em .02em;
+	margin:0
+	/*border-left: 1px solid #c8c8c8;*/
+}
+
+
+/*--------------------nvagation-----------------------*/
+.navigation,
+.navigation ul {
+	background: #00AD77;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.navigation {
+	margin-top: 1.3em;
+	min-height: 1.3em;
+	overflow: auto;
+	padding: 5px 5px 5px 8px;
+	color: yellow;
+
+
+	/*
+		Tools like css3please.com, which I used for the code that follows,
+		help you generate CSS3 code. Try it out yourself!
+	*/
+
+	-webkit-border-radius: 6px 6px 0 0; /* Android â‰¤ 1.6, iOS 1-3.2, Safari 3-4 */
+	border-radius: 6px 6px 0 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+}
+
+.navigation a {
+	color: #eee;
+	display: block;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.navigation li {
+	float: left;
+	width: 10em;
+	font-family: 'Comic Sans MS','楷体';
+}
+
+.navigation li a:hover,
+.navigation li:hover > a {
+	color: #aabadd;
+}
+
+/* :::: Navigation Submenus (the dropdowns) :::: */
+
+.navigation .submenu {
+	margin-left: -10px;
+	padding: 10px 10px 15px;
+	left: -999em; /* hide a submenu offscreen by default so visitors don't see it */
+	position: absolute;
+	z-index: 1000;
+
+	/*
+		See note above about css3please.com.
+	*/
+	-webkit-border-radius: 0 0 8px 8px; /* Android â‰¤ 1.6, iOS 1-3.2, Safari 3-4 */
+	border-radius: 0 0 8px 8px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+}
+
+.navigation li:hover .submenu {
+	display: block; /* for older versions of IE */
+	left: auto; /* show the submenu when user hovers over the parent li */
+	width: 10em;
+}
+
+.navigation .submenu li {
+	display: block;
+	float: none;
+	font-size: .8em;
+	margin-top: .5em;
+	width: auto;
+}
+
+.search form  {
+	display: inline-block;
+	position: absolute;
+	right: 10.5em;
+
+}
+
+.search img {
+	vertical-align: bottom;
+}
+
+
+
+/*--------------content---------------*/
 body {
 	background-image: url(../img/soul_yard2.jpg);
 	background-size: 100%;
@@ -13,6 +148,7 @@ body {
 
 
 main {
+	position: relative;
 	width: 1000px;
 	background-color: antiquewhite;
 	margin-left: auto;
@@ -22,14 +158,37 @@ main {
 
 }
 
+section.edit-info {
+	position: absolute;
+	left: 5em;
+	top: 8px;
+	margin-top: 6px;
+	margin-bottom: auto;
+	font-size: 0.8em;
+
+}
+
+section.edit-info span {
+	font-style: italic;
+	font-family: 'Quicksand', sans-serif;
+}
+
+#author {
+	font-style: normal;
+	font-weight: 520;
+}
 
 a,
+h2,
 time,
 form {
 	text-decoration: none;
 	font-family: 'Quicksand', sans-serif;
 }
 
+h2.quote {
+	font-weight: 300;
+}
 
 
 
@@ -68,29 +227,16 @@ p {
 	font-size: 1.1em;
 }
 
-.social-platform,
-.social-platform p{
-	font-size: 1.5em;
-	display: inline;
-}
 
-.social-platform img{
-	vertical-align: text-bottom;
-}
-
-#logo {
-	display: block;
-}
 
 figure {
 	font-size: 1.4em;
 	font-family: 'Quicksand', sans-serif;
-	font-style: bold;
-	font-weight: 700;
-	margin-top: 5px;
-	margin-bottom: 8px;
+	font-weight: 300;
+	margin-top: 25px;
+	margin-bottom: 18px;
 	background-color: #C695C6;
-	padding: .5em .3em .5em;
+	padding: 1.1em .3em;
 	border-radius: 15px;
 }
 
@@ -98,14 +244,33 @@ figure figcaption cite {
 	font-family: default;
 }
 
+.content {
+	display: block;
+	background-color: #FF699A;
+	padding: 20px 20px;
+	margin: 5em .5em 0;
+	border-radius: 20px;
+	font-family: 'Comic Sans MS';
+	font-size: 1.1em;
+}
+
+.content h2 {
+	display: block;
+	margin-top: 0;
+	margin-bottom: .2em;
+}
+
+
+/*------------------sidebar---------------------*/
+
 .sidebar{
+	position: absolute;
+	top: 22em;
+	right: 12em;
 	width: 200px;
 	background-color: #EC5F66;
 	padding: 3px 0px 3px;
 	float: right;
-	position: absolute;
-	top: 19.8em;
-	right: 11px;
 	margin: 0;
 	float: right;
 }
@@ -119,161 +284,70 @@ figure figcaption cite {
 }
 
 
+
+
+
+
+/*-------------------bottom-------------------*/
+
+.bottom {
+	color: white;
+	background-color: #304841;
+	margin-bottom: 0;
+	padding-left:.5em ;
+	padding-bottom: 10px;
+
+}
+
+h2.bottom {
+	padding: .6em 0;
+	text-align: center;
+}
+
+button {
+	display: block;
+	width: 120px;
+	height: 45px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+footer.info {
+	vertical-align: middle;
+	text-align: center;
+	margin-top:20px;
+}
+
+
+label,
+input {
+	margin: 1.5em .5em;
+
+
+}
+
+div.comment div {
+	border: 3px solid chocolate;
+	margin: 2em;
+}
+
+form {
+	display: block;
+}
+
+
+
+
+div.comment div:first-child {
+	margin-top: 0;
+}
+
 .pageclip-form__submit {
 	display: block;
 	margin-top: .5em;
 
 }
-
-.pageclip-form {
-	text-align: center;
-}
-
-
-
-form {
-	display: inline;
-}
-
-.content {
-	display: block;
-	background-color: #FF699A;
-	padding: 20px 20px;
-	margin: 0;
-	border-radius: 20px;
-	font-family: 'Comic Sans MS';
-}
-
-
-/*--------------------nvagation-----------------------*/
-.nav,
-.nav ul {
-	background: #00AD77;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-
-}
-
-.nav {
-	margin-top: 1.1em;
-	min-height: 1.3em;
- 	overflow: auto;
-	padding: 5px 5px 5px 8px;
-	color: yellow;
-
-
-	/* 
-		Tools like css3please.com, which I used for the code that follows, 
-		help you generate CSS3 code. Try it out yourself!
-	*/
-  	-webkit-border-radius: 6px 6px 0 0; /* Android â‰¤ 1.6, iOS 1-3.2, Safari 3-4 */
-          border-radius: 6px 6px 0 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
-}
-
-.nav a {
-	color: #eee;
-	display: block;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-.nav li {
-	float: left; 				
-	width: 10em;
-	font-family: 'Comic Sans MS','楷体';
-}
-
-.nav li a:hover,
-.nav li:hover > a {
-	color: #aabadd;
-}
-
-/* :::: Navigation Submenus (the dropdowns) :::: */
-header {
-	border-top: 5px solid black;
-	border-bottom: 1px solid #c8c8c8;
-	position: relative;
-}
-
-header li:first-child {
-	border-left: none;
-}
-
-header li {
-	display: inline-block;
-	font-family: 'Open Sans';
-	font-weight: 700;
-	font-size: 1.3em;
-	padding: .5em 0.01em .5em .02em;
-	margin:0
-/*border-left: 1px solid #c8c8c8;*/
-}
-
-.nav .submenu {
-	margin-left: -10px;
-	padding: 10px 10px 15px;
-	left: -999em; /* hide a submenu offscreen by default so visitors don't see it */
-	position: absolute;
-	z-index: 1000;
-	
-	/* 
-		See note above about css3please.com.
-	*/
-  -webkit-border-radius: 0 0 8px 8px; /* Android â‰¤ 1.6, iOS 1-3.2, Safari 3-4 */
-          border-radius: 0 0 8px 8px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
-}
-
-.nav li:hover .submenu {
-	display: block; /* for older versions of IE */
-	left: auto; /* show the submenu when user hovers over the parent li */
-	width: 10em;
-}
-
-.nav .submenu li {
-	display: block;
-	float: none;
-	font-size: .8em;
-	margin-top: .5em;
-	width: auto;
-}
-
-.search form  {
-	display: inline-block;
-	position: absolute;
-	right: 10.5em;
-
-}
-
-.search img {
-	vertical-align: bottom;
-}
-
-
-
-/*--------------bottom------------*/
-.bottom {
-	color: white;
-	background-color: #304841;
-	margin-bottom: 0;
-	padding: 15px 8px;
-	padding-bottom: 10px;
-
-}
-
-
-
-
-.info {
-	vertical-align: middle;
-	text-align: center;
-}
-
-
-
-
-
-
 
 
 
